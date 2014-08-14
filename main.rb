@@ -8,7 +8,8 @@ def valid_ip_addresses(text)
   # Another solution (?:\d{1,3}\.){3}\d{1,3}
 end
 
-def valid_mit_ip_addresses()
+def valid_mit_ip_addresses(text)
+  text.scan(/18\.(?:\d{1,3}\.){2}\d{1,3}/)
 end
 
 def non_mit_ip_addresses
