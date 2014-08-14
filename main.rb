@@ -18,17 +18,22 @@ def non_mit_ip_addresses(string)
   # valid_ip_addresses(string)-valid_mit_ip_addresses(string)
 end
 
-def valid_phone_numbers
+def valid_phone_numbers(text)
+  text.scan(/[2-9]\d{2}-\d{3}-\d{4}/)
 end
 
-def area_codes
+def area_codes(string)
+  string.scan(/[2-9]\d{2}(?=(?:-\d{3}-\d{4}))/)
 end
 
-def email_addresses
+def email_addresses(string)
+  string.scan(/\w+@\w+\.\w+/)
 end
 
-def zip_codes
+def zip_codes(string)
+  string.scan(/\b\d{5}\b/)
 end
 
-def hex_colors
+def hex_colors(text)
+  text.scan(/#(?:\d|[a-fA-F]){3,6}/)
 end
