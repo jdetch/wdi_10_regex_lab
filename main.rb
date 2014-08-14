@@ -12,7 +12,10 @@ def valid_mit_ip_addresses(text)
   text.scan(/18\.(?:\d{1,3}\.){2}\d{1,3}/)
 end
 
-def non_mit_ip_addresses
+def non_mit_ip_addresses(string)
+  string.scan(/\b(?!18)(?:\d{1,3}\.){3}\d{1,3}\b/)
+  # or
+  # valid_ip_addresses(string)-valid_mit_ip_addresses(string)
 end
 
 def valid_phone_numbers
